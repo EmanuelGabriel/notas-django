@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Criar notas</title>
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+  <header>
+    <nav class="menu-color">
+      <div class="container">
+
+        <div class="nav-wrapper">
+
+            <a href="{% url 'home' %}" class="brand-logo">Notas</a>
+           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+            <li><a href="{% url 'sobre' %}">Sobre</a></li>
+
+
+            {% if request.user.is_authenticated %}
+              <li>
+                <form action="{% url 'logout' %}" method="post">
+                  {% csrf_token %}
+                  <input type="hidden">
+                  <button class="btn red darken-3">Logout</button>
+                </form>
+              </li>
+
+            {% endif %}
+          </ul>
+
+          <!-- adaptação para MOBILE -->
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+            <li><a href="{% url 'sobre' %}">Sobre</a></li>
+
+            {% if request.user.is_authenticated %}
+              <li>
+
+                <form action="{% url 'logout' %}" method="post" class="form-logout">
+                  {% csrf_token %}
+                  <input type="hidden">
+                  <button class="btn red darken-3">Logout</button>
+                </form>
+              </li>
+
+            {% endif %}
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+  <script src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+  <script src="{% static 'js/materialize.min.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+  <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+  <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+</body>
+</html>

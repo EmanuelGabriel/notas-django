@@ -1,0 +1,46 @@
+.login-and-register{
+  background-color: #59008A;
+  height: 100vh;
+  width: 100vw;
+}
+.menu-color{
+  background-color: #59008A;
+}
+button.menu-color:hover{
+  background-color: #4E1270;
+}
+.create-account-link{
+  color: #0d47a1 !important;
+  margin-left: 10px;
+}
+form input{
+  border-bottom-color: #59008A !important;
+}
+.delete-form{
+  display: inline;
+}
+.login-form{
+  margin: 90px  auto auto;
+}
+.login-form .card-title{
+  text-align: center;
+}
+.text-centered{
+  text-align: center;
+}
+.form-logout{
+  margin-left: 30px;
+}
+.card.red .card-action{
+  border-top-color: rgba(0, 0, 0, 0.2);
+}
+.card.indigo .card-action{
+  border-top-color: rgba(0, 0, 0, 0.2);
+}
+.card.yellow .card-action{
+  border-top-color: rgba(0,0,0,0.1);
+}
+.card-content ul li{
+  list-style: disc;
+  margin-left: 38px;
+}
