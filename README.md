@@ -1,20 +1,31 @@
-# Django-Notes
-Simple application of notes created with Django Framework
+### Aplicação desenvolvida em Django Framework para criação de Bloco de Notas.
 
-by: [gabriell oliveira](https://gabrielloliveira.com)
+
+por: [Emanuel A. Gabriel](https://emanuelgabriel.github.io)
 
 ## Requirements
 - Python - 3.6
+- Django Framework
 
-## Installation
-- Clone the repository
-- Enter in the project folder ``` cd django-notes/ ```
-- Create a virtualenv with ``` python3.6 -m venv env ```
-- Activate the virtualenv ``` source /env/bin/activate ```
-- Install the requirements ``` pip install -r requirements.txt ```
-- Enter in the folder **notes** ``` cd notes/ ``` 
-- Execute the migrations of the app ``` python manage.py migrate ```
-- Create a **superuser** ``` python manage.py createsuperuser ```
-- Collect static files ``` python manage.py collectstatic ```
-- Run the application ``` python manage.py runserver ```
-- Open your browser on [localhost:8000](http://localhost:8000)
+## Instalação da Aplicação
+- Clonar o repositório da aplicação
+- Abrir o projeto na pasta corretamente ``` cd django-notes/ ```
+- Criar uma 'virtualenv' com ``` python3.6 -m venv env ```
+- Ativar a 'virtualenv' ``` source /env/bin/activate ```
+- Instalar os 'requirements' ``` pip install -r requirements.txt ```
+- Entrar no caminho do projeto/app **notes** ``` cd notes/ ``` 
+- Executar o 'migrations' na aplicação ``` python manage.py migrate ```
+- Criar um usuário super **superuser** ``` python manage.py createsuperuser ```
+- Coletar os arquivos static files da aplicação ``` python manage.py collectstatic ```
+- Executar a aplicação no servidor com este comando  ``` python manage.py runserver ```
+- Abra em qualquer navegador de sua preferência e veja a aplicação rodando em  [localhost:8000](http://localhost:8000)
+
+
+## Contato:
+ -  Emanuel A. Gabriel
+ - E-mail: emanuel.gabriel.sousa@hotmail.com
+ - Telefone: (86) 99931-4440/99535-4702
+ 
+ 
+ 
+ # Sistema criado para desmistificar os conhecimentos em Python.
